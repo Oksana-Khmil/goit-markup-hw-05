@@ -98,8 +98,6 @@ body {
 }
 .header-container {
   display: flex;
-  padding-top: 24px;
-  /* padding-bottom: 25px; */
   justify-content: space-between;
   align-items: center;
 }
@@ -139,7 +137,7 @@ body {
   transition: color 250ms var(--cubic);
 }
 
-.menu-link::after {
+.menu-link.curent::after {
   content: '';
   display: inline-block;
   width: 100%;
@@ -150,16 +148,17 @@ body {
   left: 0;
   bottom: 0;
   transform-origin: center bottom;
-  transform: scale(0);
-  opacity: 0;
-  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+  /* transform: scale(0);
+  opacity: 0; */
+  transition: transform-origin 250ms var(--cubic);
+  /* , opacity 250ms var(--cubic); */
 }
 
-.menu-link:hover::after,
+/* .menu-link:hover::after,
 .menu-link:focus::after {
   opacity: 1;
   transform: scale(1);
-}
+} */
 
 .menu-link,
 .contact-link {
@@ -182,6 +181,7 @@ body {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 
 .contacts {
@@ -263,6 +263,8 @@ body {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   cursor: pointer;
+  transition-property: background-color;
+  transition: 250ms var(--cubic);
 }
 
 .order-btn:hover,
@@ -481,11 +483,13 @@ body {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
+  transition: background-color 250ms var(--cubic);
 }
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--primary-white-color);
+  transition: fill 250ms var(--cubic);
 }
 
 /*===================END==TEAM=================================*/
@@ -510,11 +514,13 @@ body {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   outline: none;
+  transition: border 250ms var(--cubic);
 }
 
 .client-link:hover .icon-client,
-.contact-link:focus .icon-client {
+.client-link:focus .icon-client {
   fill: var(--accent-color);
+  transition: fill 250ms var(--cubic);
 }
 .icon-client {
   fill: var(--icons-color);
@@ -577,6 +583,7 @@ body {
 .footer-map-link:hover,
 .footer-map-link:focus {
   color: var(--accent-color);
+  transition: color 250ms var(--cubic);
 }
 
 .footer-link {
@@ -616,6 +623,7 @@ body {
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: var(--accent-color);
+  transition: background-color 250ms var(--cubic);
 }
 
 .footer-soc-icon {
@@ -669,6 +677,7 @@ body {
 .filter-btn:focus {
   color: var(--primary-white-color);
   background: var(--accent-color);
+
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   outline: none;
@@ -719,8 +728,8 @@ body {
   align-items: center;
   left: 0;
   transform: translateY(100%);
-  /* opacity: 0;
-  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic); */
+  opacity: 0;
+  transition: transform 2500ms var(--cubic), opacity 250ms var(--cubic);
 }
 
 .image-filter {
@@ -734,7 +743,7 @@ body {
 .project-link:focus .image-card-overlay {
   transform: translateY(-100%);
   opacity: 1;
-  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+  /* transition: transform 250ms var(--cubic), opacity 250ms var(--cubic); */
 }
 
 .project-title {
